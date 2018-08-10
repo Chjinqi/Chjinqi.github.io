@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[POJ3764--The xor-longest Path]]></title>
+    <url>%2F2018%2F08%2F03%2FPOJ3764%2F</url>
+    <content type="text"><![CDATA[传送门：POJ3764—The xor-longest Path题目大意:在一颗带权的树上，求任意两点间路径上各边权值异或和的最大值。题目解法：设dis(u,v)为u,v间路径上各边权值异或和。显然dis(u,v)==dis(root,u)^dis(root,v),所以问题转换为求任意两个点i,j到root的路径上各边权值异或和最大。于是我们用dfs预处理，把每个dis(root,i)丢进一个二进制trie中。那每丢一个dis(root,i)，显然要在trie中找能使尽量多的二进制位与dis(root,i)相反，这样才能使这两个的异或和最大，这其实就是个贪心。真相は一つしかない: 正解就是trie+贪心（逃嗯♂~~~代码实现如下：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788#include&lt;stdio.h&gt;#include&lt;iostream&gt;#include&lt;math.h&gt;#include&lt;algorithm&gt;#include&lt;string.h&gt;#define ll long long#define maxn 100005using namespace std;int N;int _last[maxn],_next[maxn&lt;&lt;1],_end[maxn&lt;&lt;1],_len[maxn&lt;&lt;1];int val[maxn];int o;int tot;void ins(int a,int b,int c)&#123; _end[++o]=b; _next[o]=_last[a]; _last[a]=o; _len[o]=c;&#125;void inss(int a,int b,int c)&#123; ins(a,b,c); ins(b,a,c);&#125;struct node&#123; int son[2]; void init()&#123; son[0]=son[1]=0; &#125;&#125;;node tri[4000005];void dfs(int u,int fa)&#123; for(int i=_last[u];i;i=_next[i])&#123; int v=_end[i]; if(v==fa)continue; val[v]=val[u]^_len[i]; dfs(v,u); &#125;&#125;void add(int x)&#123; int p=0; int o=0; for(int i=30;i&gt;=0;--i)&#123; if(x&amp;(1&lt;&lt;i))o=1; else o=0; if(!tri[p].son[o])&#123; tri[p].son[o]=++tot; tri[tot].init(); &#125; p=tri[p].son[o]; &#125;&#125;int gs(int x)&#123; int num=0,p=0,o=0; for(int i=30;i&gt;=0;--i)&#123; if(x&amp;(1&lt;&lt;i))o=0; else o=1; if(tri[p].son[o])&#123; num|=(1&lt;&lt;i); p=tri[p].son[o]; &#125; else p=tri[p].son[o^1]; &#125; return num;&#125;int main()&#123; while(scanf("%d",&amp;N)!=EOF)&#123; for(int i=1;i&lt;=o;++i)_last[i]=0; o=0; tot=0; tri[tot].init(); val[1]=0; int u,v,w; for(int i=1;i&lt;N;++i) &#123; scanf("%d%d%d",&amp;u,&amp;v,&amp;w); ++u; ++v; inss(u,v,w); &#125; dfs(1,0); int ans=0; for(int i=1;i&lt;=N;++i)&#123; ans=max(ans,gs(val[i])); add(val[i]); &#125; printf("%d\n",ans); &#125; return 0;&#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello world!!!]]></title>
+    <url>%2F2018%2F07%2F23%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[啊♂，终于搞好了,可以搞事了（嘿嘿嘿）]]></content>
+  </entry>
+</search>
