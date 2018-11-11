@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chjinqi.github.io/"/>
-  <updated>2018-11-06T07:58:59.053Z</updated>
+  <updated>2018-11-11T16:26:18.080Z</updated>
   <id>https://chjinqi.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NOIP2018滚粗记</title>
+    <link href="https://chjinqi.github.io/2018/11/12/NOIP2018%E6%BB%9A%E7%B2%97%E8%AE%B0/"/>
+    <id>https://chjinqi.github.io/2018/11/12/NOIP2018滚粗记/</id>
+    <published>2018-11-11T16:24:00.000Z</published>
+    <updated>2018-11-11T16:26:18.080Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h2><p>去bs试机，见了鬼的键盘啊，空格左右悬空，回车则硬的一笔，摁不下去。。。</p><h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>听说是原题？？？<br>然而并没做过。。。<br>T1随手敲了个会被卡成 $N^2$ 的假分治。。。，随机极限数据后就不管了（我一定是脑抽了）<br>T2一眼没看出是背包，于是写了个同余系BFS判断当前数是否能被表示（反正不会T，然而空间开小了一些）<br>T3二分+贪心骗分啊。。。（一定是lg数据太水了竟然骗了95）<br>期望：100+100+95<br>（如果被卡：70+90+？）</p><h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><p>昨天水题今天神题？？？<br>T1写了个堆然后光荣的wa完了基环树的点（我好像还过完了大样例的233）<br>T2找规律啊。。。结果失智了啊，<br>N==2的规律是 $3^{M-1} * 4 $ 。。。<br>结果硬生生被我写成了组合数*2的幂。。。<br>（反正结果一样）<br>T3什么东西，只会$N^2$树形DP验证啊。。。然而，我SB调前面调了太久，打T3时太急了，一直过不了样例，只能爆0<br>期望：60+45+0。。。<br>是不是省一无望了啊</p><p>送给学长们的话：</p><blockquote><p><strong>一个个OIer的竞赛生涯总是从一场NOIP开始，大多也在一场NOIP中结束，好似一次次轮回在不断上演。<br>如果这次NOIP是你的起点，那么祝你的OI生涯如同夏花般绚烂。<br>如果这次NOIP是你的终点，那么祝你的OI回忆宛若繁星般璀璨。</strong></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Day-0&quot;&gt;&lt;a href=&quot;#Day-0&quot; class=&quot;headerlink&quot; title=&quot;Day 0&quot;&gt;&lt;/a&gt;Day 0&lt;/h2&gt;&lt;p&gt;去bs试机，见了鬼的键盘啊，空格左右悬空，回车则硬的一笔，摁不下去。。。&lt;/p&gt;
+&lt;h2 id=&quot;Day1&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>扩展BSGS</title>
