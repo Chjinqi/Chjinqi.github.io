@@ -1238,7 +1238,7 @@ pre .javascript .function {
   margin: -20px auto 15px;
   text-align: center;
   font-size: 14px;
-  color: #999;
+  color: $ #dcdcdc;
   font-weight: bold;
   line-height: 1;
 }
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8673a1;
+  background: #0349f2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2903,4 +2903,8 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+body {
+  background: url("/images/backGround.jpg");
+  background-attachment: fixed;
 }
