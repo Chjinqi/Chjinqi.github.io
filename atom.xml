@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chjinqi.github.io/"/>
-  <updated>2018-11-28T16:03:04.266Z</updated>
+  <updated>2018-12-08T12:32:30.530Z</updated>
   <id>https://chjinqi.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>震惊！！！一某liu姓男子竟然在ACM赛上做出这种事[点击展开]</title>
+    <link href="https://chjinqi.github.io/2018/12/08/%E9%87%8D%E4%BA%A4ACM%E6%B8%B8%E8%AE%B0/"/>
+    <id>https://chjinqi.github.io/2018/12/08/重交ACM游记/</id>
+    <published>2018-12-08T12:32:30.000Z</published>
+    <updated>2018-12-08T12:32:30.530Z</updated>
+    
+    <content type="html"><![CDATA[<p>%%%OBlack，Newuser，hdhd差点AK虐场（听说被卡常了233）</p><p>（分别是高三最强，高二最强，高一最强）</p><h2 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h2><p>报了到就去吃午饭，重交食堂竟然把所有菜混在一起。。。太冷了不说了</p><h2 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h2><p>12：40开考，考前在楼下闲逛</p><p>考前立了个flag，说图论，网络流都给我，结果就遭重了</p><p>拿到题，分到了C题，给你一个序列$f(i)=a * f(i-2)+b * f(i-1) $，每次操作往x序列$[l,r]$上分别加上$f(1),f(2)……f(r-l+1)$。</p><p>想起了原来做过的加斐波那契数列的题，于是直接差分</p><script type="math/tex; mode=display">cf(l)+=f(1)\\cf(l+1)-=b*f(1)\\cf(l+1)+=f(2)\\cf(r+1)+=f(r-l+2)\\cf(r+2)+=a*f(r-l+1)\\</script><p>然后算最后的数组时记下i-1，i-2位的值X，Y然后乘加乘加之类的就行了</p><p>然而打代码时石乐志，把最后的*a写成了*b，送了一发WA</p><p><strong>PS：我一开始打不来对拍真是太菜了</strong></p><p>然后把ABCDF做完后刚H题，光想着反悔堆了，殊不知网络流可以完美解决</p><p>我考试时还奶了一口，这题不会是图论吧233不可能的吧</p><p>然后成功奶中，白坐了一个小时。。。</p><p><strong>PSS：这告诉我们没事不要乱插旗（逃</strong></p><p><strong>PSSS：淘淘摘苹果这个队名真是太政治正确了</strong></p><p>没什么好说的，我的降智buff太强了，只有第六，被上面三位大佬吊锤</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;%%%OBlack，Newuser，hdhd差点AK虐场（听说被卡常了233）&lt;/p&gt;
+&lt;p&gt;（分别是高三最强，高二最强，高一最强）&lt;/p&gt;
+&lt;h2 id=&quot;上午&quot;&gt;&lt;a href=&quot;#上午&quot; class=&quot;headerlink&quot; title=&quot;上午&quot;&gt;&lt;/a&gt;上午&lt;/h2
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ZJOI2017-树状数组</title>
