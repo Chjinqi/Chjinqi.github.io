@@ -103,8 +103,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Chjinqi Blog" type="application/atom+xml" />
 
@@ -122,7 +120,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://t1.picb.cc/uploads/2018/12/20/JzzkKy.md.png">
 <meta property="og:image" content="https://t1.picb.cc/uploads/2018/12/20/Jzzwhc.md.png">
-<meta property="og:updated_time" content="2018-12-20T16:04:41.537Z">
+<meta property="og:updated_time" content="2018-12-20T16:12:33.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ4663 Hack">
 <meta name="twitter:description" content="传送门%%%Newuser，直接秒掉了一句话题意：割掉一些边使得S，T之间不连通且S-&amp;gt;T的路径上仅有一条割边考试题 首先看题面和数据范围，就可以知道跟最小割有关。 普通的最小割可以实现前一半，那么如何处理后一半呢？ 先放一张样例  直接跑最小割答案是2，即切掉1-&amp;gt;3,2-&amp;gt;4 但我们发现，那S-&amp;gt;2-&amp;gt;4-&amp;gt;1-&amp;gt;3-&amp;gt;T这条路径上就有两条割边了">
@@ -421,7 +419,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  792
+                  806
                 </span>
               
 
@@ -456,13 +454,14 @@
 <p>那么想让这种情况不成立，即使得这个割不是个割==&gt;使得S，T连通</p>
 <p>我们可以连一条1-&gt;4的边使得S，T联通</p>
 <p>为了防止这条边被割，我们把这条边的容量变为inf即可</p>
-<p>由于容量为inf，所以只会在其他方案都不成立是割这条边，那么答案若大于inf就输出-1</p>
+<p>由于容量为inf，所以只会在其他方案都不成立时割这条边，那么答案若大于inf就输出-1</p>
 <h3 id="你以为完了？？？"><a href="#你以为完了？？？" class="headerlink" title="你以为完了？？？"></a>你以为完了？？？</h3><p>再来看这个图</p>
 <p><img src="https://t1.picb.cc/uploads/2018/12/20/Jzzwhc.md.png" alt=""></p>
 <p>显然答案为2，只要割掉S-&gt;T就行了</p>
 <p>但用上面的方法跑出来是7</p>
 <p>为什么？因为最小割是所有正向割边的权值和</p>
-<p>而我们加边时可能会加入反向边。这种边被割了不会对答案造成影响，但会使得本来不存在的S-&gt;T的路径存在</p>
+<p>而我们加边时可能会加入反向边。这种边如果被割了，不会对答案造成影响。</p>
+<p>但仔细一想，它会使得有些一开始不存在的S-&gt;T的路径存在，如S-&gt;1-&gt;T</p>
 <p>那么一开始先把图连好，把S不能到的点标记了，再往网络流里加边。</p>
 <p>因为到不了，所以跟到不了的点的边自然也不用加入网络流了</p>
 <p>于是你就A掉了此题</p>
