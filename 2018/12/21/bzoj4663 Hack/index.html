@@ -120,7 +120,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://t1.picb.cc/uploads/2018/12/20/JzzkKy.md.png">
 <meta property="og:image" content="https://t1.picb.cc/uploads/2018/12/20/Jzzwhc.md.png">
-<meta property="og:updated_time" content="2018-12-20T16:32:27.930Z">
+<meta property="og:updated_time" content="2019-02-07T03:16:35.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ4663 Hack">
 <meta name="twitter:description" content="传送门%%%Newuser，直接秒掉了一句话题意：割掉一些边使得S，T之间不连通且S-&amp;gt;T的路径上仅有一条割边考试题 首先看题面和数据范围，就可以知道跟最小割有关。 普通的最小割可以实现前一半，那么如何处理后一半呢？ 先放一张样例  直接跑最小割答案是2，即切掉1-&amp;gt;3,2-&amp;gt;4 但我们发现，那S-&amp;gt;2-&amp;gt;4-&amp;gt;1-&amp;gt;3-&amp;gt;T这条路径上就有两条割边了">
@@ -134,7 +134,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -712,6 +712,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
